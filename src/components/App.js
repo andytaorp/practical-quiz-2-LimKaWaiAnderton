@@ -13,14 +13,14 @@ function App() {
     const newHabit = {
       id: Date.now(),
       name: habitName,
-      completed: false,
+      checked: false,
     };
     setHabits((prevHabits) => [...prevHabits, newHabit])
   };
 
   const handleToggleHabit = (id) => {
     // TODO: write code to toggle a habit's status
-    setHabits((prevHabits) => prevHabits.map((habit) => habit.id === id ? { ...habit, completed: !habit.completed } : habit))
+    setHabits((prevHabits) => prevHabits.map((habit) => habit.id === id ? { ...habit, checked: !habit.checked } : habit))
   };
 
   const handleDeleteHabit = (id) => {
